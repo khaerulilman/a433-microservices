@@ -16,12 +16,12 @@ spec:
         - name: backend
           image: khaerulilman/karsajobs:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
           env:
             - name: APP_PORT
               value: "8080"
             - name: MONGO_HOST
-              value: mongo-service:27017
+              value: mongo-service
             - name: MONGO_USER
               valueFrom:
                 secretKeyRef:
